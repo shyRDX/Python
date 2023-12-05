@@ -32,6 +32,8 @@ def click_location(location):
 def time_to_click():
     # 截取屏幕快照
     screenshot = pyautogui.screenshot()
+      # 将图片转为灰度模式
+    screenshot = screenshot.convert('L')
     # 保存截图到指定路径
     screenshot.save(r'E:\MyLife\AI\classskip\image.png')
     print("已截图并保存到：" + imagedir + "\image.png")
